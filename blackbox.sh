@@ -10,10 +10,10 @@ sudo chown -R blackbox_exporter:blackbox_exporter /etc/blackbox
 # Download blackbox_exporter and copy utilities to where they should be in the filesystem
 #VERSION=0.12.0
 VERSION=$(curl https://raw.githubusercontent.com/prometheus/blackbox_exporter/master/VERSION)
-wget https://github.com/prometheus/blackbox_exporter/releases/download/v${VERSION}/blackbox_exporter-${VERSION}.linux-armhf.tar.gz
-tar xvzf blackbox_exporter-${VERSION}.linux-armhf.tar.gz
+wget https://github.com/prometheus/blackbox_exporter/releases/download/v${VERSION}/blackbox_exporter-${VERSION}.linux-armv7.tar.gz
+tar xvzf blackbox_exporter-${VERSION}.linux-armv7.tar.gz
 
-sudo cp blackbox_exporter-${VERSION}.linux-armhf/blackbox_exporter /usr/local/bin/
+sudo cp blackbox_exporter-${VERSION}.linux-armv7/blackbox_exporter /usr/local/bin/
 sudo chown blackbox_exporter:blackbox_exporter /usr/local/bin/blackbox_exporter
 
 # Populate configuration files
@@ -26,5 +26,5 @@ sudo systemctl enable blackbox_exporter
 sudo systemctl start blackbox_exporter
 
 # Installation cleanup
-rm blackbox_exporter-${VERSION}.linux-armhf.tar.gz
-rm -rf blackbox_exporter-${VERSION}.linux-armhf
+rm blackbox_exporter-${VERSION}.linux-armv7.tar.gz
+rm -rf blackbox_exporter-${VERSION}.linux-armv7
