@@ -16,13 +16,13 @@ sudo chown prometheus:prometheus /var/lib/prometheus
 # Download prometheus and copy utilities to where they should be in the filesystem
 #VERSION=2.2.1
 VERSION=$(curl https://raw.githubusercontent.com/prometheus/prometheus/master/VERSION)
-wget https://github.com/prometheus/prometheus/releases/download/v${VERSION}/prometheus-${VERSION}.linux-amd64.tar.gz
-tar xvzf prometheus-${VERSION}.linux-amd64.tar.gz
+wget https://github.com/prometheus/prometheus/releases/download/v${VERSION}/prometheus-${VERSION}.linux-armhf.tar.gz
+tar xvzf prometheus-${VERSION}.linux-armhf.tar.gz
 
-sudo cp prometheus-${VERSION}.linux-amd64/prometheus /usr/local/bin/
-sudo cp prometheus-${VERSION}.linux-amd64/promtool /usr/local/bin/
-sudo cp -r prometheus-${VERSION}.linux-amd64/consoles /etc/prometheus
-sudo cp -r prometheus-${VERSION}.linux-amd64/console_libraries /etc/prometheus
+sudo cp prometheus-${VERSION}.linux-armhf/prometheus /usr/local/bin/
+sudo cp prometheus-${VERSION}.linux-armhf/promtool /usr/local/bin/
+sudo cp -r prometheus-${VERSION}.linux-armhf/consoles /etc/prometheus
+sudo cp -r prometheus-${VERSION}.linux-armhf/console_libraries /etc/prometheus
 
 # Assign the ownership of the tools above to prometheus user
 sudo chown -R prometheus:prometheus /etc/prometheus/consoles
@@ -41,5 +41,5 @@ sudo systemctl enable prometheus
 sudo systemctl start prometheus
 
 # Installation cleanup
-rm prometheus-${VERSION}.linux-amd64.tar.gz
-rm -rf prometheus-${VERSION}.linux-amd64
+rm prometheus-${VERSION}.linux-armhf.tar.gz
+rm -rf prometheus-${VERSION}.linux-armhf
