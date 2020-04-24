@@ -1,30 +1,11 @@
-# Prometheus Installation Script for Ubuntu 16.04 and 18.04 LTS
+# Prometheus Installation Script for Raspbian
 
 **Important:** This is a work in progress.
 
 **Even more important:** If you actually plan to use this do not forget to edit configuration files to your needs (service files, YAML configuration files, etc.). Configuration files provided here are just generic files.
 
-More about it here: [gist](https://gist.github.com/petarGitNik/18ae938aaef4c4ff58189df8a4fc7de9).
 
 This script downloads the files in the current directory. You could change this.
-
-### To Do
-
-- [ ] Rewrite scripts so one could start it with `sudo ./full_installation` instead of doing `sudo` before script
-- [ ] Write uninstallation scripts (both full uninstall and uninstallation of individual components)
-- [ ] Add optional installation for `mysqld_exporter` and `postgresql_exporter`
-
-Any suggestions and contributions are welcome.
-
-### If you're new
-
-I have written few Prometheus instructions that you may or may not find useful:
-
-* [How to Write Rules for Prometheus](https://petargitnik.github.io/blog/2018/01/04/how-to-write-rules-for-prometheus)
-* [How to Install Alertmanager on Ubuntu 16.04](https://petargitnik.github.io/blog/2018/01/03/how-to-install-alertmanager-on-ubuntu-16.04)
-* [How to Install MySQL Exporter for Prometheus 2.0 on Ubuntu 16.04](https://petargitnik.github.io/blog/2018/01/07/how-to-install-mysql-exporter-for-prometheus-2.0-on-ubuntu-16.04)
-
-If you find any mistake, or suggestion for enhancement that would be great.
 
 # How to Use This?
 
