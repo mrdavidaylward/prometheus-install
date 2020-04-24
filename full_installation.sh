@@ -14,6 +14,7 @@
 ./blackbox.sh
 ./alertmanager.sh
 ./grafana.sh
+curl -fsSL "https://raw.githubusercontent.com/fahlke/raspberrypi_exporter/master/installer.sh" | bash
 
 echo "Installation complete."
 echo "Visit port 3000 to view grafana dashboards."
